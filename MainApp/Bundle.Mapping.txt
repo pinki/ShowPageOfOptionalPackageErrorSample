@@ -1,0 +1,2 @@
+﻿[OptionalProjects]
+"..\OptionalPackageWithPageToShow\OptionalPackageWithPageToShow.csproj"

@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="MainApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MainApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Spacing="60" HorizontalAlignment="Center">
+            <Button FontSize="24" Click="Button_Click">Show page from this app</Button>
+            <Button FontSize="24" Click="Button_Click_1">Show page from optional package</Button>
+        </StackPanel>
+
+        <Frame x:Name="ContentFrame" Grid.Row="1"/>
+    </Grid>
+</Page>
