@@ -1,19 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OptionalPackageWithPageToShow
 {
@@ -24,7 +12,12 @@ namespace OptionalPackageWithPageToShow
     {
         public HalloPage()
         {
-            this.InitializeComponent();
+            // DON'T call InitializeComponent
+
+            // ad4d8e16-9f9c-458f-ac0f-e74cb99fa10c is the optional package's identity name
+            Uri resourceLocator = new Uri("ms-appx://ad4d8e16-9f9c-458f-ac0f-e74cb99fa10c/HalloPage.xaml");
+
+            Application.LoadComponent(this, resourceLocator, ComponentResourceLocation.Nested);
         }
     }
 }
